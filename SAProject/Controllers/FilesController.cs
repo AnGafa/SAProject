@@ -45,6 +45,9 @@ namespace SAProject.Controllers
         public IActionResult Create()
         {
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["Email"] = new SelectList(_context.Users, "Email", "Email");
+            //ViewBag.UserId = User.Identity;
+            ViewBag.UserName = User.Identity.Name;
             return View();
         }
 
