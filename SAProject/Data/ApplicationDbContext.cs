@@ -14,5 +14,11 @@ namespace SAProject.Data
         { }
 
         public DbSet<File> Files { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

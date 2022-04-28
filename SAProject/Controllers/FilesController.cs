@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SAProject.Data;
 using SAProject.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SAProject.Controllers
@@ -46,14 +47,13 @@ namespace SAProject.Controllers
         {
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["Email"] = new SelectList(_context.Users, "Email", "Email");
-            //ViewBag.UserId = User.Identity;
-            ViewBag.UserName = User.Identity.Name;
+            List<string> list = new List<string>();
             return View();
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Password,FileExpiry,UserId")] File file)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Title,Password,FileExpiry")] File file)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +61,7 @@ namespace SAProject.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", file.UserId);
+            //ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", file.UserId);
             return View(file);
         }
     }
