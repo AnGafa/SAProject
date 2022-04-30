@@ -14,10 +14,21 @@ namespace SAProject.Data
         { }
 
         public DbSet<File> Files { get; set; }
-        public DbSet<ApplicationUser> Users { get; set; }
+        public override DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<UserFile> UserFiles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<UserFile>()
+                    .HasOne(t => t.User)
+                    .WithMany(t => t.UserFiles)
+                    .HasForeignKey(t => t.UserId);
+
+            modelBuilder.Entity<UserFile>()
+                    .HasOne(t => t.File)
+                    .WithMany(t => t.UserFiles)
+                    .HasForeignKey(t => t.FileId);
+
             base.OnModelCreating(modelBuilder);
         }
     }

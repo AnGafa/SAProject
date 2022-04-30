@@ -7,14 +7,13 @@ namespace SAProject.Models
 {
     public class ApplicationUser: IdentityUser
     {
-        public ApplicationUser()
-        {
-            this.Files = new HashSet<File>();
-        }
+        [Key]
+        public override string Id { get; set; }
+        public override string Email { get; set; }
 
-        [Required]
+        //[Required]
         public string Name { get; set; }
 
-        public virtual ICollection<File> Files { get; set; }
+        public virtual ICollection<UserFile> UserFiles { get; set; }
     }
 }

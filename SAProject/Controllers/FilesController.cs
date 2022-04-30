@@ -21,7 +21,7 @@ namespace SAProject.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Files.Include(n => n.Users);
+            var applicationDbContext = _context.Files.Include(n => n.UserFiles);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -33,8 +33,8 @@ namespace SAProject.Controllers
             }
 
             var file = await _context.Files
-                .Include(n => n.Users)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Include(n => n.UserFiles)
+                .FirstOrDefaultAsync(m => m.FileId == id);
             if (file == null)
             {
                 return NotFound();
@@ -45,6 +45,7 @@ namespace SAProject.Controllers
 
         public IActionResult Create()
         {
+
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["Email"] = new SelectList(_context.Users, "Email", "Email");
             List<string> list = new List<string>();
@@ -53,11 +54,37 @@ namespace SAProject.Controllers
 
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Password,FileExpiry")] File file)
+        public async Task<IActionResult> Create([Bind("FileId,Title,Password,FileExpiry")] File file, UserFile userFile, UserFile userFile1, ApplicationUser user)
         {
+            userFile.File = file;
+            userFile1.File = file;
+            //user.Email = "admin@admin.com";
+            //userFile.User = user;
+
+            userFile.FileId = file.FileId;
+            userFile1.FileId = file.FileId;
+
+            var email = Request.Form["txtEmails"].ToString();
+            string[] emailArr = email.Split(' ');
+
+            string[] aa = new string[2];
+            int a = 0;
+            foreach (string s in emailArr)
+            {
+                Task<ApplicationUser> taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == s);
+
+                aa[a] = taskUser.Result.Id;
+
+                a++;
+            }
+            userFile.UserId = aa[0];
+            userFile1.UserId = aa[1];
+
             if (ModelState.IsValid)
             {
                 _context.Add(file);
+                _context.Add(userFile);
+                _context.Add(userFile1);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
