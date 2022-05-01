@@ -22,13 +22,24 @@ namespace SAProject.Controllers
 
         public async Task<IActionResult> Index()
         {
+
+
+            var userFiles = _context.UserFiles
+                .Include(userFile => userFile.User).Where(userr => userr.User.Email == User.Identity.Name)
+                .Include(userFile => userFile.File);
+
+
+
+
+            //var t = _context.Files.Where(f => f.FileId == userFile.FileId);
+
             //var applicationDbContext = _context.Files.Include(n => n.UserFiles);
             var applicationDbContext = _context.Files
-                .Include(File => File.UserFiles)
-                .ThenInclude(UserFile => UserFile.User.Where(User => User.Id == UserFile.UserId));
+                .Include(File => File.UserFiles.Where(userFile => userFile.UserId == "a"));
+                //.ThenInclude(UserFile => UserFile.User.Where(User => User.Id == UserFile.UserId));
                 //.Where(User => User.Id == UserFile.userId));
 
-            return View(await applicationDbContext.ToListAsync());
+            return View(await userFiles.ToListAsync());
         }
 
         public async Task<IActionResult> Details(int? id)

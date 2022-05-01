@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SAProject.Models.File>
+﻿@model IEnumerable<SAProject.Models.UserFile>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.File.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Password)
+                @Html.DisplayNameFor(model => model.File.Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FileExpiry)
+                @Html.DisplayNameFor(model => model.File.FileExpiry)
             </th>
             <th>@*
                 @Html.DisplayNameFor(model => model.UserId)*@
@@ -31,13 +31,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.File.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Password)
+                @Html.DisplayFor(modelItem => item.File.Password)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FileExpiry)
+                @Html.DisplayFor(modelItem => item.File.FileExpiry)
             </td>
             @*<td>
                 @Html.DisplayFor(modelItem => item.UserId)
