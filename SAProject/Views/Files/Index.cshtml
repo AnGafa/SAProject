@@ -1,53 +1,63 @@
 ﻿@model IEnumerable<SAProject.Models.UserFile>
 
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+	<a asp-action="Create">Create New</a>
 </p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.File.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.File.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.File.FileExpiry)
-            </th>
-            <th>@*
-                @Html.DisplayNameFor(model => model.UserId)*@
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.File.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.File.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.File.FileExpiry)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>*@
-        </tr>
-}
-    </tbody>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.File.Title)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.File.Password)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.File.FileExpiry)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.File.FileData)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody onload="func()">
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.File.Title)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.File.Password)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.File.FileExpiry)
+				</td>
+				<td>
+
+					<h1><span id="text"></span></h1>
+				</td>
+				@*<td>
+					<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+					<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+					<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+					</td>*@
+			</tr>
+		}
+	</tbody>
 </table>
+
+<script type="text/javascript">
+	function func()
+	{
+		var fileData = "asdasdas";
+		document.getElementById("myText").innerHTML = fileData;
+	}
+</script>

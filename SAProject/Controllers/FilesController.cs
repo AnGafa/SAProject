@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using FileTypeChecker;
+using FileTypeChecker.Abstracts;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SAProject.Data;
 using SAProject.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,22 +27,9 @@ namespace SAProject.Controllers
 
         public async Task<IActionResult> Index()
         {
-
-
             var userFiles = _context.UserFiles
                 .Include(userFile => userFile.User).Where(userr => userr.User.Email == User.Identity.Name)
                 .Include(userFile => userFile.File);
-
-
-
-
-            //var t = _context.Files.Where(f => f.FileId == userFile.FileId);
-
-            //var applicationDbContext = _context.Files.Include(n => n.UserFiles);
-            var applicationDbContext = _context.Files
-                .Include(File => File.UserFiles.Where(userFile => userFile.UserId == "a"));
-                //.ThenInclude(UserFile => UserFile.User.Where(User => User.Id == UserFile.UserId));
-                //.Where(User => User.Id == UserFile.userId));
 
             return View(await userFiles.ToListAsync());
         }
@@ -71,34 +63,68 @@ namespace SAProject.Controllers
 
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FileId,Title,Password,FileExpiry")] File file, List<UserFile> userFiles, ApplicationUser user)
+        public async Task<IActionResult> Create([Bind("FileId,Title,Password,FileExpiry")] Models.File file, List<UserFile> userFiles, ApplicationUser user, IFormFile uploadData)
         {
             Task<ApplicationUser> taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == User.Identity.Name);
 
-            userFiles.Add(new UserFile() { File = file, FileId = file.FileId, UserId = taskUser.Result.Id});
+            userFiles.Add(new UserFile() { File = file, FileId = file.FileId, UserId = taskUser.Result.Id });
 
             var email = Request.Form["txtEmails"].ToString();
-            string[] emailArr = email.Split(' ');
 
-            foreach (string s in emailArr)
+            if (email != "")
             {
-                taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == s);
-                userFiles.Add(new UserFile() { File = file, FileId = file.FileId, UserId = taskUser.Result.Id });
-            }
-
-            if (ModelState.IsValid)
-            {
-                _context.Add(file);
-                int a = 0;
-                foreach (var userFile in userFiles)
+                string[] emailArr = email.Split(' ');
+                foreach (string s in emailArr)
                 {
-                    _context.Add(userFiles[a]);
-                    a++;
+                    taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == s);
+                    userFiles.Add(new UserFile() { File = file, FileId = file.FileId, UserId = taskUser.Result.Id });
                 }
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
             }
-            //ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", file.UserId);
+
+            if (uploadData != null && uploadData.Length > 0)
+            {
+
+                var fileStream = uploadData.OpenReadStream();
+
+                var isRecognizableType = FileTypeValidator.IsTypeRecognizable(fileStream);
+                if (!isRecognizableType)
+                {
+                    ViewBag.Error = "File is unrecognized";
+                }
+                else
+                {
+                    IFileType fileType = FileTypeValidator.GetFileType(fileStream);
+
+                    if (fileType.Extension == "PDF" || fileType.Extension == "JPG")
+                    {
+                        using (var target = new MemoryStream())
+                        {
+                            uploadData.CopyTo(target);
+                            var fileBytes = target.ToArray();
+                            file.FileData = fileBytes;
+                        }
+
+                        if (ModelState.IsValid)
+                        {
+                            _context.Add(file);
+                            int a = 0;
+                            foreach (var userFile in userFiles)
+                            {
+                                _context.Add(userFiles[a]);
+                                a++;
+                            }
+                            await _context.SaveChangesAsync();
+                            return RedirectToAction(nameof(Index));
+                        }
+                    }
+                    else
+                        ViewBag.Error = "accepted file extensions are PDF and JPG";
+                }
+            }
+            else
+                ViewBag.Error = "File is required or unrecognized file";
+
+
             return View(file);
         }
     }

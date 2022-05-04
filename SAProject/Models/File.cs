@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,6 +17,7 @@ namespace SAProject.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [DateValidation(ErrorMessage = "date can't be earlier than today's date")]
         public DateTime? FileExpiry { get; set; }
+        public byte[] FileData { get; set; }
 
         public virtual ICollection<UserFile> UserFiles { get; set; }
     }

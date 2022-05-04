@@ -446,3 +446,17 @@ D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\De
 D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
 D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Views\Files\Index.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Lockout.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml.g.cs
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\FileTypeChecker.Common.dll
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\FileTypeChecker.dll
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\FileTypeChecker.Web.dll
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\Myrmec.dll
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\Myrmec.Mime.dll

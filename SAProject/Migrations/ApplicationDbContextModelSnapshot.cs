@@ -229,8 +229,19 @@ namespace SAProject.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<byte[]>("FileData")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<DateTime?>("FileExpiry")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("FileName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FileType")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");

@@ -40,8 +40,15 @@ namespace SAProject
 
             services.Configure<IdentityOptions>(options =>
             {
-                options.Password.RequiredLength = 2;
-                options.Lockout.MaxFailedAccessAttempts = 4;
+                options.Password.RequiredLength = 8;
+            });
+
+            services.AddAuthentication().AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection =
+                   Configuration.GetSection("Authentication:Google");
+                options.ClientId = googleAuthNSection["ClientId"];
+                options.ClientSecret = googleAuthNSection["ClientSecret"];
             });
         }
 
@@ -62,11 +69,11 @@ namespace SAProject
 
                 ApplicationUser adminUserExists = userManager.FindByEmailAsync("admin@mysite.com").Result;
 
-                if (adminUserExists != null)
+                if (adminUserExists == null)
                 {
                     // create a new user
                     var identityResult = userManager.CreateAsync(new ApplicationUser()
-                    { Name = "Admin", Email = "admin@mysite.com" },     // user details
+                    { Name = "Admin", Email = "admin@mysite.com", UserName = "admin@mysite.com" },     // user details
                                                 "DefultAdminPass123!").Result;                             // password
 
                     // if (identityResult.Succeeded)
