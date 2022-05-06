@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "w+L4mFwXPt8lgPGcApoAvPszc67DyKjOxlVKAxr/ikQgyDzwWl6CGi5knFuIs3smI47laYURC1UwMfjh96ml6w==",
+  "dgSpecHash": "j8HBgRX3ijT+PTN7Fgyl2tcfxZG6BiqiZsXpDNbZcLQTOe3/e70DRVDONXR5YKo8IxJCgi9rCv24QL7pZKow/w==",
   "success": true,
   "projectFilePath": "D:\\Users\\Andrea Gafa\\Desktop\\School\\6.2\\Securing Apps\\SAProject\\SAProject\\SAProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\file.typechecker\\2.0.0\\file.typechecker.2.0.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\file.typechecker.web\\2.0.0\\file.typechecker.web.2.0.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.applicationinsights\\2.20.0\\microsoft.applicationinsights.2.20.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\5.0.15\\microsoft.aspnetcore.authentication.google.5.0.15.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.16\\microsoft.aspnetcore.cryptography.internal.5.0.16.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.16\\microsoft.aspnetcore.cryptography.keyderivation.5.0.16.nupkg.sha512",

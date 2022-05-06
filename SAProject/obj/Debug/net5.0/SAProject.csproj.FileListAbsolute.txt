@@ -460,3 +460,5 @@ D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\De
 D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\FileTypeChecker.Web.dll
 D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\Myrmec.dll
 D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\Myrmec.Mime.dll
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\bin\Debug\net5.0\Microsoft.ApplicationInsights.dll
+D:\Users\Andrea Gafa\Desktop\School\6.2\Securing Apps\SAProject\SAProject\obj\Debug\net5.0\Razor\Views\Error\ErrorPage.cshtml.g.cs

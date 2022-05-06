@@ -25,6 +25,7 @@ namespace SAProject.Controllers
             _context = context;
         }
 
+        
         public async Task<IActionResult> Index()
         {
             var userFiles = _context.UserFiles
@@ -34,22 +35,35 @@ namespace SAProject.Controllers
             return View(await userFiles.ToListAsync());
         }
 
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> DownloadFile(int? id, AccessLog accessLog)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var file = await _context.Files
-                .Include(n => n.UserFiles)
-                .FirstOrDefaultAsync(m => m.FileId == id);
-            if (file == null)
-            {
-                return NotFound();
-            }
+            Models.File file = await _context.Files.Where(file => file.FileId == id).FirstOrDefaultAsync();
 
-            return View(file);
+            await AddLog(file, accessLog);
+
+            return File(file.FileData, System.Net.Mime.MediaTypeNames.Application.Octet, file.FileName);
+        }
+
+        [HttpPost]
+        private async Task AddLog(Models.File file, AccessLog accessLog)
+        {
+            var taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == User.Identity.Name);
+
+            accessLog.IpAddress = Request.HttpContext.Connection.RemoteIpAddress.ToString();
+            accessLog.TimeStamp = DateTime.Now;
+            accessLog.UserId = taskUser.Result.Id;
+            accessLog.FileId = file.FileId;
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(accessLog);
+            }
+            await _context.SaveChangesAsync();
         }
 
         public IActionResult Create()
@@ -62,7 +76,7 @@ namespace SAProject.Controllers
         }
 
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FileId,Title,Password,FileExpiry")] Models.File file, List<UserFile> userFiles, ApplicationUser user, IFormFile uploadData)
         {
             Task<ApplicationUser> taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == User.Identity.Name);
@@ -95,8 +109,10 @@ namespace SAProject.Controllers
                 {
                     IFileType fileType = FileTypeValidator.GetFileType(fileStream);
 
-                    if (fileType.Extension == "PDF" || fileType.Extension == "JPG")
+                    if (fileType.Extension == "pdf" || fileType.Extension == "jpg")
                     {
+                        file.FileName = uploadData.FileName;
+
                         using (var target = new MemoryStream())
                         {
                             uploadData.CopyTo(target);

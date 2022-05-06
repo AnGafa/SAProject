@@ -16,9 +16,6 @@
 				@Html.DisplayNameFor(model => model.File.Title)
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.File.Password)
-			</th>
-			<th>
 				@Html.DisplayNameFor(model => model.File.FileExpiry)
 			</th>
 			<th>
@@ -35,29 +32,15 @@
 					@Html.DisplayFor(modelItem => item.File.Title)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.File.Password)
-				</td>
-				<td>
 					@Html.DisplayFor(modelItem => item.File.FileExpiry)
 				</td>
 				<td>
-
-					<h1><span id="text"></span></h1>
+					@Html.DisplayFor(modelItem => item.File)
 				</td>
-				@*<td>
-					<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-					<a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-					<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-					</td>*@
+				<td>
+					<a asp-action="DownloadFile" asp-route-id="@item.FileId">Download</a>
+				</td>
 			</tr>
 		}
 	</tbody>
 </table>
-
-<script type="text/javascript">
-	function func()
-	{
-		var fileData = "asdasdas";
-		document.getElementById("myText").innerHTML = fileData;
-	}
-</script>

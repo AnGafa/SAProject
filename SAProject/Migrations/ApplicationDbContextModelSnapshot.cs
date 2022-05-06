@@ -154,6 +154,34 @@ namespace SAProject.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("SAProject.Models.AccessLog", b =>
+                {
+                    b.Property<int>("LogId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("FileId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IpAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LogId");
+
+                    b.HasIndex("FileId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AccessLog");
+                });
+
             modelBuilder.Entity("SAProject.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -236,17 +264,10 @@ namespace SAProject.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FileName")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("FileType")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FileId");
@@ -327,6 +348,23 @@ namespace SAProject.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("SAProject.Models.AccessLog", b =>
+                {
+                    b.HasOne("SAProject.Models.File", "File")
+                        .WithMany("AccessLogs")
+                        .HasForeignKey("FileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SAProject.Models.ApplicationUser", "User")
+                        .WithMany("AccessLogs")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("File");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("SAProject.Models.UserFile", b =>
                 {
                     b.HasOne("SAProject.Models.File", "File")
@@ -346,11 +384,15 @@ namespace SAProject.Migrations
 
             modelBuilder.Entity("SAProject.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("AccessLogs");
+
                     b.Navigation("UserFiles");
                 });
 
             modelBuilder.Entity("SAProject.Models.File", b =>
                 {
+                    b.Navigation("AccessLogs");
+
                     b.Navigation("UserFiles");
                 });
 #pragma warning restore 612, 618

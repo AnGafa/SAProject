@@ -3,15 +3,64 @@ i:{00000000-0000-0000-0000-000000000000}:SAProject.sln
 ++SAProject
 i:{00000000-0000-0000-0000-000000000000}:SAProject
 ++Connected Services 
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>675
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1369
 ++Dependencies
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>674
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1368
 ++Properties
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\properties\
 ++wwwroot
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\
 ++Areas
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\
+++Identity
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\
+++Pages
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\
+++Account
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\
+++Manage
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\
+++_ManageNav.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\_managenav.cshtml
+++_ViewImports.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\_viewimports.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\_viewimports.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\_viewimports.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\_viewimports.cshtml
+++Disable2fa.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\disable2fa.cshtml
+++EnableAuthenticator.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\enableauthenticator.cshtml
+++ExternalLogins.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\externallogins.cshtml
+++ManageNavPages.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\managenavpages.cs
+++ResetAuthenticator.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\resetauthenticator.cshtml
+++TwoFactorAuthentication.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\twofactorauthentication.cshtml
+++ExternalLogin.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\externallogin.cshtml
+++Lockout.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\lockout.cshtml
+++Login.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\login.cshtml
+++LoginWith2fa.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\loginwith2fa.cshtml
+++Logout.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\logout.cshtml
+++Register.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\register.cshtml
+++Register.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\register.cshtml.cs
+++_ValidationScriptsPartial.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\_validationscriptspartial.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\shared\_validationscriptspartial.cshtml
+++_ViewStart.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\_viewstart.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\_viewstart.cshtml
+++IdentityHostingStartup.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\identityhostingstartup.cs
 ++Controllers
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\controllers\
 ++FilesController.cs
@@ -22,12 +71,27 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\data\
 ++Migrations
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\data\migrations\
-++20220426163110_initialmigration.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\data\migrations\20220426163110_initialmigration.cs
-++ApplicationDbContextModelSnapshot.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\data\migrations\applicationdbcontextmodelsnapshot.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\
 ++ApplicationDbContext.cs
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\data\applicationdbcontext.cs
+++20220429155749_initmigration.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220429155749_initmigration.cs
+++20220430103649_initmigration2.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220430103649_initmigration2.cs
+++20220501121644_initmigration3.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501121644_initmigration3.cs
+++20220501124858_initmigration4.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501124858_initmigration4.cs
+++20220501130107_initmigration5.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501130107_initmigration5.cs
+++20220501143015_initmigration6.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501143015_initmigration6.cs
+++20220504101213_initmigration7.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504101213_initmigration7.cs
+++20220504101213_initmigration7.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504101213_initmigration7.designer.cs
+++ApplicationDbContextModelSnapshot.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\applicationdbcontextmodelsnapshot.cs
 ++Models
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\models\
 ++ApplicationUser.cs
@@ -36,17 +100,19 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\models\errorviewmodel.cs
 ++File.cs
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\models\file.cs
+++UserFile.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\models\userfile.cs
 ++Views
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\
 ++Files
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\files\
 ++Create.cshtml
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\files\create.cshtml
+++Index.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\files\index.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\home\index.cshtml
 ++Home
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\home\
-++Index.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\home\index.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\files\index.cshtml
 ++Privacy.cshtml
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\home\privacy.cshtml
 ++Shared
@@ -55,27 +121,18 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\shared\_layout.cshtml
 ++_LoginPartial.cshtml
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\shared\_loginpartial.cshtml
-++_ValidationScriptsPartial.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\shared\_validationscriptspartial.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\_validationscriptspartial.cshtml
 ++Error.cshtml
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\shared\error.cshtml
-++_ViewImports.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\_viewimports.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\_viewimports.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\_viewimports.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\_viewimports.cshtml
-++_ViewStart.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\_viewstart.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\_viewstart.cshtml
 ++appsettings.json
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\appsettings.json
 ++Program.cs
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\program.cs
+++ScaffoldingReadMe.txt
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\scaffoldingreadme.txt
 ++Startup.cs
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\startup.cs
 ++SQL Server Express LocalDB (Local) (ConnectionStrings:DefaultConnection)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>697
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1399
 ++Analyzers
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:analyzers
 ++Frameworks
@@ -96,10 +153,38 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\
 ++favicon.ico
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\favicon.ico
-++Identity
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\
-++20220426163110_initialmigration.Designer.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\data\migrations\20220426163110_initialmigration.designer.cs
+++Disable2fa.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\disable2fa.cshtml.cs
+++EnableAuthenticator.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\enableauthenticator.cshtml.cs
+++ExternalLogins.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\externallogins.cshtml.cs
+++ResetAuthenticator.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\resetauthenticator.cshtml.cs
+++TwoFactorAuthentication.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\twofactorauthentication.cshtml.cs
+++ExternalLogin.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\externallogin.cshtml.cs
+++Lockout.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\lockout.cshtml.cs
+++Login.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\login.cshtml.cs
+++LoginWith2fa.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\loginwith2fa.cshtml.cs
+++Logout.cshtml.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\logout.cshtml.cs
+++20220429155749_initmigration.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220429155749_initmigration.designer.cs
+++20220430103649_initmigration2.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220430103649_initmigration2.designer.cs
+++20220501121644_initmigration3.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501121644_initmigration3.designer.cs
+++20220501124858_initmigration4.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501124858_initmigration4.designer.cs
+++20220501130107_initmigration5.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501130107_initmigration5.designer.cs
+++20220501143015_initmigration6.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220501143015_initmigration6.designer.cs
 ++appsettings.Development.json
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\appsettings.development.json
 ++Microsoft.AspNetCore.Analyzers
@@ -117,19 +202,33 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:c:\program files\dotnet\sdk\6.0.202\sdk
 ++Microsoft.CodeAnalysis.NetAnalyzers
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:c:\program files\dotnet\sdk\6.0.202\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
 ++Microsoft.EntityFrameworkCore.Analyzers
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:c:\users\andre\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.15\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:c:\users\andre\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.16\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
 ++Microsoft.AspNetCore.App
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\microsoft.aspnetcore.app
 ++Microsoft.NETCore.App
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\microsoft.netcore.app
-++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (5.0.15)
-++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.15)
-++Microsoft.AspNetCore.Identity.UI (5.0.15)
-++Microsoft.EntityFrameworkCore.SqlServer (5.0.15)
-++Microsoft.EntityFrameworkCore.Tools (5.0.15)
-++Microsoft.Extensions.Identity.Core (5.0.15)
+++File.TypeChecker.Web (2.0.0)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1404
+++Microsoft.AspNetCore.Authentication.Google (5.0.15)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1385
+++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (5.0.8)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1383
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.16)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1386
+++Microsoft.AspNetCore.Identity.UI (5.0.16)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1390
+++Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation (5.0.8)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1381
+++Microsoft.EntityFrameworkCore.SqlServer (5.0.16)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1382
+++Microsoft.EntityFrameworkCore.Tools (5.0.16)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1388
+++Microsoft.Extensions.Identity.Core (5.0.16)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1387
 ++Microsoft.VisualStudio.Web.CodeGeneration.Design (5.0.2)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>695
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1389
+++Myrmec (1.2.0)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1384
 ++serviceDependencies.local.json
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\properties\servicedependencies.local.json
 ++site.css
@@ -144,8 +243,6 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\jquery-validation\
 ++jquery-validation-unobtrusive
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\jquery-validation-unobtrusive\
-++Pages
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\
 ++dist
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\bootstrap\dist\
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\jquery\dist\
@@ -215,41 +312,33 @@ i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 ++bootstrap.bundle.min.js.map
 i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-++Microsoft.EntityFrameworkCore.SqlServer (5.0.16)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>740
-++Microsoft.EntityFrameworkCore.Tools (5.0.16)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>741
-++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (5.0.8)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1068
-++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (5.2.7)
-++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (6.0.0)
-++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.16)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1067
-++Microsoft.AspNetCore.Identity.UI (5.0.16)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1069
-++Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation (5.0.8)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1070
-++Microsoft.AspNetCore.Authentication.Google (5.0.15)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1071
-++Microsoft.Extensions.Identity.Core (5.0.16)
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1134
-++Account
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\
-++Register.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\register.cshtml
-++Register.cshtml.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\register.cshtml.cs
-++IdentityHostingStartup.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\identityhostingstartup.cs
-++ScaffoldingReadMe.txt
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\scaffoldingreadme.txt
-++Manage
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\
-++_ManageNav.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\_managenav.cshtml
-++ManageNavPages.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\manage\managenavpages.cs
-++ExternalLogin.cshtml
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\externallogin.cshtml
-++ExternalLogin.cshtml.cs
-i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\areas\identity\pages\account\externallogin.cshtml.cs
+++20220504112911_initmigration8.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504112911_initmigration8.cs
+++20220504112911_initmigration8.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504112911_initmigration8.designer.cs
+++20220504113746_initmigration9.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504113746_initmigration9.cs
+++20220504113746_initmigration9.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504113746_initmigration9.designer.cs
+++ErrorController.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\controllers\errorcontroller.cs
+++Microsoft.ApplicationInsights (2.20.0)
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:>1461
+++Error
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\error\
+++AppError.cshtml
+++404Error.cshtml
+++404.cshtml
+++500.cshtml
+++ErrorPage.cshtml
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\views\error\errorpage.cshtml
+++AccessLog.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\models\accesslog.cs
+++20220504140619_initmigration10.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504140619_initmigration10.cs
+++20220504140619_initmigration10.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504140619_initmigration10.designer.cs
+++20220504141135_initmigration11.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504141135_initmigration11.cs
+++20220504141135_initmigration11.Designer.cs
+i:{3bc5638d-0558-496b-ad3a-e279f4f129ac}:d:\users\andrea gafa\desktop\school\6.2\securing apps\saproject\saproject\migrations\20220504141135_initmigration11.designer.cs

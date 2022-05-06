@@ -16,6 +16,7 @@ namespace SAProject.Data
         public DbSet<File> Files { get; set; }
         public override DbSet<ApplicationUser> Users { get; set; }
         public DbSet<UserFile> UserFiles { get; set; }
+        public DbSet<AccessLog> AccessLog { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +28,16 @@ namespace SAProject.Data
             modelBuilder.Entity<UserFile>()
                     .HasOne(t => t.File)
                     .WithMany(t => t.UserFiles)
+                    .HasForeignKey(t => t.FileId);
+
+            modelBuilder.Entity<AccessLog>()
+                    .HasOne(t => t.User)
+                    .WithMany(t => t.AccessLogs)
+                    .HasForeignKey(t => t.UserId);
+
+            modelBuilder.Entity<AccessLog>()
+                    .HasOne(t => t.File)
+                    .WithMany(t => t.AccessLogs)
                     .HasForeignKey(t => t.FileId);
 
             base.OnModelCreating(modelBuilder);

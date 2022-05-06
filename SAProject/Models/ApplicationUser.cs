@@ -15,5 +15,6 @@ namespace SAProject.Models
         public string Name { get; set; }
 
         public virtual ICollection<UserFile> UserFiles { get; set; }
+        public virtual ICollection<AccessLog> AccessLogs { get; set; }
     }
 }

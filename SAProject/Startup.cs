@@ -85,7 +85,9 @@ namespace SAProject
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseStatusCodePagesWithRedirects("/ErrorPage/{0}");
+                app.UseExceptionHandler("/Home/Error");
                 app.UseMigrationsEndPoint();
             }
             else

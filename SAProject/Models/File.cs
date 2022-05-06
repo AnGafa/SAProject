@@ -10,16 +10,17 @@ namespace SAProject.Models
     {
         [Key]
         public int FileId { get; set; }
+        [Required]
         public string Title { get; set; }
-        public string Password { get; set; }
-        //public string FileUrl { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [DateValidation(ErrorMessage = "date can't be earlier than today's date")]
         public DateTime? FileExpiry { get; set; }
+        public string FileName { get; set; }
         public byte[] FileData { get; set; }
 
         public virtual ICollection<UserFile> UserFiles { get; set; }
+        public virtual ICollection<AccessLog> AccessLogs { get; set; }
     }
 
     public class DateValidationAttribute : ValidationAttribute
