@@ -22,6 +22,18 @@
     </div>
 }
 
+@if(ViewData.ModelState["FileExpiry"] != null && ViewData.ModelState["FileExpiry"].Errors.Any())
+{
+    <div class="alert alert-danger" role="alert">
+        @Html.ValidationMessageFor(m => m.FileExpiry)
+    </div>
+}
+
+@*<div class="alert alert-danger" role="alert">
+    @Html.ValidationMessageFor(m => m.FileExpiry)
+</div>*@
+
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -35,19 +47,18 @@
             <div class="form-group">
                 @Html.TextBoxFor(model => model.FileExpiry, new { type = "date" })
             </div>
-  
-             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6 myDataTitle">Email</div>
+            <p>seperate emails with a space</p>   
+            <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     @Html.TextBox("txtEmails", "", new { placeholder = "emails", id="txtEmails"})
                 </div>
             </div>
-
+            <br />
             <div class="col-md-10">
                 <p>Upload file</p>
                 <input class="form-control" name="uploadData" id="uploadData" type="file" />
             </div>
-
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

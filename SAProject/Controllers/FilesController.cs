@@ -32,6 +32,7 @@ namespace SAProject.Controllers
                 .Include(userFile => userFile.User).Where(userr => userr.User.Email == User.Identity.Name)
                 .Include(userFile => userFile.File);
 
+            
             return View(await userFiles.ToListAsync());
         }
 
@@ -44,9 +45,16 @@ namespace SAProject.Controllers
 
             Models.File file = await _context.Files.Where(file => file.FileId == id).FirstOrDefaultAsync();
 
-            await AddLog(file, accessLog);
+            if(file.FileExpiry > DateTime.Now)
+            {
+                await AddLog(file, accessLog);
 
-            return File(file.FileData, System.Net.Mime.MediaTypeNames.Application.Octet, file.FileName);
+                return File(file.FileData, System.Net.Mime.MediaTypeNames.Application.Octet, file.FileName);
+            }else
+            {
+                ViewBag.Error = TempData["File has expired"];
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         [HttpPost]
@@ -85,14 +93,20 @@ namespace SAProject.Controllers
 
             var email = Request.Form["txtEmails"].ToString();
 
-            if (email != "")
+            try
             {
-                string[] emailArr = email.Split(' ');
-                foreach (string s in emailArr)
+                if (email != "")
                 {
-                    taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == s);
-                    userFiles.Add(new UserFile() { File = file, FileId = file.FileId, UserId = taskUser.Result.Id });
+                    string[] emailArr = email.Split(' ');
+                    foreach (string s in emailArr)
+                    {
+                        taskUser = _context.Users.FirstOrDefaultAsync(u => u.Email == s);
+                        userFiles.Add(new UserFile() { File = file, FileId = file.FileId, UserId = taskUser.Result.Id });
+                    }
                 }
+            }catch (Exception ex)
+            {
+
             }
 
             if (uploadData != null && uploadData.Length > 0)

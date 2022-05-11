@@ -6,6 +6,14 @@
 
 <h1>Index</h1>
 
+@if (!string.IsNullOrEmpty(ViewBag.Error))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Error
+    </div>
+}
+
+
 <p>
 	<a asp-action="Create">Create New</a>
 </p>
@@ -19,9 +27,8 @@
 				@Html.DisplayNameFor(model => model.File.FileExpiry)
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.File.FileData)
+				@Html.DisplayNameFor(model => model.File.FileName)
 			</th>
-			<th></th>
 		</tr>
 	</thead>
 	<tbody onload="func()">
@@ -32,10 +39,17 @@
 					@Html.DisplayFor(modelItem => item.File.Title)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.File.FileExpiry)
+					@if(item.File.FileExpiry != null)
+					{
+						@Html.DisplayFor(modelItem => item.File.FileExpiry)
+					}else
+					{
+						<p>N/A</p>
+					}
+
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.File)
+					@Html.DisplayFor(modelItem => item.File.FileName)
 				</td>
 				<td>
 					<a asp-action="DownloadFile" asp-route-id="@item.FileId">Download</a>
